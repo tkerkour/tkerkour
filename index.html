@@ -4,125 +4,226 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Thomas Kerkour</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	</head>
 	<body>
-		<h1>Thomas Kerkour</h1>
-		<h2>Développeur fullstack depuis 2019</h2>
-		<h3>Je construis des solutions performantes pour le web et le mobile</h3>
+		<header class="fixed top-0 bg-white left-0 right-0 p-2 border-b-1">
+			<button class="text-gray-500 hover:text-black cursor-pointer">
+				<svg width="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.35719 3H14.6428C15.7266 2.99999 16.6007 2.99998 17.3086 3.05782C18.0375 3.11737 18.6777 3.24318 19.27 3.54497C20.2108 4.02433 20.9757 4.78924 21.455 5.73005C21.7568 6.32234 21.8826 6.96253 21.9422 7.69138C22 8.39925 22 9.27339 22 10.3572V13.6428C22 14.7266 22 15.6008 21.9422 16.3086C21.8826 17.0375 21.7568 17.6777 21.455 18.27C20.9757 19.2108 20.2108 19.9757 19.27 20.455C18.6777 20.7568 18.0375 20.8826 17.3086 20.9422C16.6008 21 15.7266 21 14.6428 21H9.35717C8.27339 21 7.39925 21 6.69138 20.9422C5.96253 20.8826 5.32234 20.7568 4.73005 20.455C3.78924 19.9757 3.02433 19.2108 2.54497 18.27C2.24318 17.6777 2.11737 17.0375 2.05782 16.3086C1.99998 15.6007 1.99999 14.7266 2 13.6428V10.3572C1.99999 9.27341 1.99998 8.39926 2.05782 7.69138C2.11737 6.96253 2.24318 6.32234 2.54497 5.73005C3.02433 4.78924 3.78924 4.02433 4.73005 3.54497C5.32234 3.24318 5.96253 3.11737 6.69138 3.05782C7.39926 2.99998 8.27341 2.99999 9.35719 3ZM6.85424 5.05118C6.24907 5.10062 5.90138 5.19279 5.63803 5.32698C5.07354 5.6146 4.6146 6.07354 4.32698 6.63803C4.19279 6.90138 4.10062 7.24907 4.05118 7.85424C4.00078 8.47108 4 9.26339 4 10.4V13.6C4 14.7366 4.00078 15.5289 4.05118 16.1458C4.10062 16.7509 4.19279 17.0986 4.32698 17.362C4.6146 17.9265 5.07354 18.3854 5.63803 18.673C5.90138 18.8072 6.24907 18.8994 6.85424 18.9488C7.47108 18.9992 8.26339 19 9.4 19H14.6C15.7366 19 16.5289 18.9992 17.1458 18.9488C17.7509 18.8994 18.0986 18.8072 18.362 18.673C18.9265 18.3854 19.3854 17.9265 19.673 17.362C19.8072 17.0986 19.8994 16.7509 19.9488 16.1458C19.9992 15.5289 20 14.7366 20 13.6V10.4C20 9.26339 19.9992 8.47108 19.9488 7.85424C19.8994 7.24907 19.8072 6.90138 19.673 6.63803C19.3854 6.07354 18.9265 5.6146 18.362 5.32698C18.0986 5.19279 17.7509 5.10062 17.1458 5.05118C16.5289 5.00078 15.7366 5 14.6 5H9.4C8.26339 5 7.47108 5.00078 6.85424 5.05118ZM7 7C7.55229 7 8 7.44772 8 8V16C8 16.5523 7.55229 17 7 17C6.44772 17 6 16.5523 6 16V8C6 7.44772 6.44772 7 7 7Z" fill="currentColor"></path></svg>
+				<svg width="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.35719 3H14.6428C15.7266 2.99999 16.6007 2.99998 17.3086 3.05782C18.0375 3.11737 18.6777 3.24318 19.27 3.54497C20.2108 4.02433 20.9757 4.78924 21.455 5.73005C21.7568 6.32234 21.8826 6.96253 21.9422 7.69138C22 8.39925 22 9.27339 22 10.3572V13.6428C22 14.7266 22 15.6008 21.9422 16.3086C21.8826 17.0375 21.7568 17.6777 21.455 18.27C20.9757 19.2108 20.2108 19.9757 19.27 20.455C18.6777 20.7568 18.0375 20.8826 17.3086 20.9422C16.6008 21 15.7266 21 14.6428 21H9.35717C8.27339 21 7.39925 21 6.69138 20.9422C5.96253 20.8826 5.32234 20.7568 4.73005 20.455C3.78924 19.9757 3.02433 19.2108 2.54497 18.27C2.24318 17.6777 2.11737 17.0375 2.05782 16.3086C1.99998 15.6007 1.99999 14.7266 2 13.6428V10.3572C1.99999 9.27341 1.99998 8.39926 2.05782 7.69138C2.11737 6.96253 2.24318 6.32234 2.54497 5.73005C3.02433 4.78924 3.78924 4.02433 4.73005 3.54497C5.32234 3.24318 5.96253 3.11737 6.69138 3.05782C7.39926 2.99998 8.27341 2.99999 9.35719 3ZM6.85424 5.05118C6.24907 5.10062 5.90138 5.19279 5.63803 5.32698C5.07354 5.6146 4.6146 6.07354 4.32698 6.63803C4.19279 6.90138 4.10062 7.24907 4.05118 7.85424C4.00078 8.47108 4 9.26339 4 10.4V13.6C4 14.7366 4.00078 15.5289 4.05118 16.1458C4.10062 16.7509 4.19279 17.0986 4.32698 17.362C4.6146 17.9265 5.07354 18.3854 5.63803 18.673C5.90138 18.8072 6.24907 18.8994 6.85424 18.9488C7.17922 18.9754 7.55292 18.9882 8 18.9943V5.0057C7.55292 5.01184 7.17922 5.02462 6.85424 5.05118ZM10 5V19H14.6C15.7366 19 16.5289 18.9992 17.1458 18.9488C17.7509 18.8994 18.0986 18.8072 18.362 18.673C18.9265 18.3854 19.3854 17.9265 19.673 17.362C19.8072 17.0986 19.8994 16.7509 19.9488 16.1458C19.9992 15.5289 20 14.7366 20 13.6V10.4C20 9.26339 19.9992 8.47108 19.9488 7.85424C19.8994 7.24907 19.8072 6.90138 19.673 6.63803C19.3854 6.07354 18.9265 5.6146 18.362 5.32698C18.0986 5.19279 17.7509 5.10062 17.1458 5.05118C16.5289 5.00078 15.7366 5 14.6 5H10Z" fill="currentColor"></path></svg>
+			</button>
+		</header>
 
-		<p>Je suis un développeur qui aime résoudre des problèmes complexes, latent ou évident. Rigoureux et organisé, j’apprécie travailler en équipe afin de mener des projets à des succès commerciaux ou opérationnels.</p>
-		<p>Je travaille actuellement à la Compagnie Fiduciaire en tant que développeur fullstack. Je contribue à améliorer les logiciels internes afin de faciliter le travail des différents collaborateurs.</p> 
-		<p>Par le passé, j’ai eu l’opportunité de développer des logiciels en tant que freelance dans différentes tailles d’entreprises : allant de grandes entreprises e-commerce à des solopreneurs en passant par des agences web.</p>
-		<p>Sur mon temps libre, j’aime courir et passer du temps en famille ou entre amis.</p>
-
-		<h3>Expériences</h3>
-		<div>
-			<p>OCTOBRE 2023 À AUJOURD'HUI</p>
-			<p>Compagnie Fiduciaire, Bordeaux - Développeur Full Stack CDI</p>
+		<nav class="fixed p-5 pt-5 bg-white top-10 border-1">
 			<ul>
-				<li>Automatiser l’import et l’ export des opérations comptables de plus d’un millier de collaborateurs vers 2 logiciels comptables externes (Fulll et Colala)</li>
-				<li>Organiser et catégoriser plus d’une centaine de fichier de documentation technique afin de centraliser et trouver l’information plus rapidement</li>
-				<li>Mise en place du projet utilisé par le service support pour tester automatiquement les nouvelles fonctionnalités du service développement</li>
+				<li class="my-2 py-2 px-4 text-sm rounded-lg bg-gray-100">A propos</li>
+				<li class="my-2 py-2 px-4 text-sm rounded-lg">Expériences</li>
+				<li class="my-2 py-2 px-4 text-sm rounded-lg">Projets</li>
 			</ul>
+		</nav>
+
+		<div class="max-w-3xl m-auto py-10 px-5">
+			<h1 class="h1">Thomas Kerkour</h1>
+			<h2 class="h2">Ingénieur Full Stack</h2>
+			<h3 class="h3">Je construis des solutions performantes pour le web et le mobile</h3>
+
+			<p class="border-top">Je suis un développeur qui aime résoudre des problèmes complexes, latent ou évident. Rigoureux et organisé, j’apprécie travailler en équipe afin de mener des projets à des succès commerciaux ou opérationnels.</p>
+			<p class="mt-4">Je travaille actuellement à la Compagnie Fiduciaire en tant que développeur fullstack. Je contribue à améliorer les logiciels internes afin de faciliter le travail des différents collaborateurs.</p> 
+			<p class="mt-4">Par le passé, j’ai eu l’opportunité de développer des logiciels en tant que freelance dans différentes tailles d’entreprises : allant de grandes entreprises e-commerce à des solopreneurs en passant par des agences web.</p>
+			<p class="mt-4">Sur mon temps libre, j’aime courir et passer du temps en famille ou entre amis.</p>
+
+			<h3 class="h3 title font-bold">EXPÉRIENCES</h3>
+
+			<div class="mt-10">
+				<div class="flex mb-4">
+					<p class="text-sm w-40 font-light">2023 - Présent</p>
+					<a href="https://www.compagnie-fiduciaire.com/" class="flex items-center gap-1 font-semibold">
+						Ingénieur Full Stack - Compagnie Fiduciaire
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</a>
+				</div>
+
+				<ul class="pl-40">
+					<li>Automatiser l’import et l’ export des opérations comptables de plus d’un millier de collaborateurs vers 2 logiciels comptables externes (Coala et Fulll)</li>
+					<li>Organiser et catégoriser plus d’une centaine de fichiers de documentation technique afin de trouver l’information plus rapidement</li>
+					<li>Mise en place du projet utilisé par le service support pour tester automatiquement les nouvelles fonctionnalités du service développement</li>
+				</ul>
+			</div>
+
+			<div class="mt-12">
+				<div class="flex mb-4">
+					<p class="text-sm w-40 font-light">2021 - 2022</p>
+					<a href="#" class="flex items-center gap-1 font-semibold">
+						Ingénieur Full Stack - C-MonEtiquette
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</a>
+				</div>
+
+				<ul class="pl-40">
+					<li>Améliorer la qualité et la rapidité des livraisons des nouvelles fonctionnalités grâce à la migration de la codebase de Javascript vers Typescript</li>
+					<li>Création et intégration d’un design system pour améliorer la qualité de l’expérience utilisateur</li>
+				</ul>
+			</div>
+
+			<div class="mt-12">
+				<div class="flex mb-4">
+					<p class="text-sm w-40 font-light">2022</p>
+					<a href="https://www.groupe-aquitem.fr/" class="flex items-center gap-1 font-semibold">
+						Ingénieur Full Stack - Groupe Aquitem
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</a>
+				</div>
+
+				<ul class="pl-40">
+					<li>Génération de plusieurs milliers d'euros de chiffre d'affaires supplémentaire grâce à la création de sites e-commerce Prestashop pour des boutiques physiques de vêtement partenaires.</li>
+				</ul>
+			</div>
+
+			<div class="mt-12">
+				<div class="flex mb-4">
+					<p class="text-sm w-40 font-light"">2020 - 2021</p>
+					<a href="https://www.memosia.fr/" class="flex items-center gap-1 font-semibold">
+						Ingénieur Full Stack - Memosia
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</a>
+				</div>
+
+				<ul class="pl-40"
+					<li>Création de l’application mobile pour le compte d’un entrepreneur qu’il a vendu à des professeurs de droit de La Sorbonne.</li>
+				</ul>
+			</div>
+
+			<div class="mt-12">
+				<div class="flex mb-4">
+					<p class="text-sm w-40 font-light"">2020</p>
+					<a href="https://www.previmeteo.com/" class="flex items-center gap-1 font-semibold">
+						Ingénieur Full Stack - Previmeteo
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</a>
+				</div>
+
+				<ul class="pl-40"
+					<li>Compléter les membres de l’équipe pour faire face à une charge de travail élevée.</li>
+					<li>Création d’interfaces utilisateurs.</li>
+				</ul>
+			</div>
+
+			<div class="mt-12">
+				<div class="flex mb-4">
+					<p class="text-sm w-40 font-light"">2020</p>
+					<a href="https://www.bookr.fr/" class="flex items-center gap-1 font-semibold">
+						Ingénieur Full Stack - Bookr
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</a>
+				</div>
+
+				<ul class="pl-40"
+					<li>Création de la plateforme qui enregistre plus d’un milliers d’utilisateurs et génère plusieurs centaines de collaborations par mois entre influenceurs et marques.</li>
+					<li>Compléter les membres de l’équipe pour faire face à une charge de travail élevée.</li>
+					<li>Création d’interfaces utilisateurs.</li>
+				</ul>
+			</div>
+
+			<div class="mt-12">
+				<div class="flex mb-4">
+					<p class="text-sm w-40 font-light"">2020</p>
+					<a href="https://www.iloveplaytime.com/?lang=fr" class="flex items-center gap-1 font-semibold">
+						Ingénieur Full Stack - Playtime
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</a>
+				</div>
+
+				<ul class="pl-40"
+					<li>Augmentation du trafic de plus de 78%  en déployant plus d’une cinquantaine de pages sur mobiles et tablettes.</li>
+				</ul>
+			</div>
+
+			<div class="mt-12">
+				<div class="flex mb-4">
+					<p class="text-sm w-40 font-light"">2020</p>
+					<a href="https://www.comptus.fr/" class="flex items-center gap-1 font-semibold">
+						Ingénieur Full Stack - Comptus
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</a>
+				</div>
+
+				<ul class="pl-40"
+					<li>Finaliser un projet web bloqué par manque de compétences en front-end.</li>
+					<li>Création et intégration des interfaces utilisateurs.</li>
+				</ul>
+			</div>
+
+			<div class="mt-12">
+				<div class="flex mb-4">
+					<p class="text-sm w-40 font-light"">2019</p>
+					<a href="https://www.garantipro.fr/" class="flex items-center gap-1 font-semibold">
+						Ingénieur Full Stack - Garantipro
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</a>
+				</div>
+
+				<ul class="pl-40"
+					<li>Création de la plateforme : système de création de devis / factures, amélioration du onboarding des utilisateurs en récupérant les infos des sociétés par l’API de l’INSEE</li>
+					<li>Création d’une charte graphique</li>
+					<li>Création d’une offre freemium. Gestion des utilisateurs gratuits et abonnés. Intégration de Stripe Connect.</li>
+				</ul>
+			</div>
+
+			<div class="mt-12">
+				<div class="flex mb-4">
+					<p class="text-sm w-40 font-light"">2019</p>
+					<a href="https://www.uppday.fr/" class="flex items-center gap-1 font-semibold">
+						Ingénieur Full Stack - Uppday
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</a>
+				</div>
+
+				<ul class="pl-40"
+					<li>Création de la plateforme et d’un système de réservation de salle des fêtes : suivi des réservations, paiement en ligne, notifications d’activités.</li>
+					<li>Mise en place d’un espace administrateur et utilisateurs.</li>
+					<li>Création d’une charte graphique.</li>
+				</ul>
+			</div>
+
+			<div class="mt-12">
+				<div class="flex mb-4">
+					<p class="text-sm w-40 font-light"">2019</p>
+					<a href="https://www.lewagon.com/fr" class="flex items-center gap-1 font-semibold">
+						Professeur assistant - Le Wagon
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+					</a>
+				</div>
+
+				<ul class="pl-40"
+					<li>Accompagner une vingtaine d’étudiants durant 3 mois : explication des concepts clés du développement web et soutien pour les faire progresser et les rendre autonome</li>
+				</ul>
+			</div>
+
+			<!-- <a href="#" class="flex gap-2">
+				Voir le CV complet
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+			</a>
+
+			<h3 class="h3 title">Projets</h3>
+			<p>A venir...</p>-->
+
+			<footer class="mt-10">
+				<p class="text-sm my-5 font-light">Conçu avec <a href="https://www.figma.com/">Figma</a>, coder avec <a href="https://neovim.io/">Neovim</a>. Construit sans framework et déployé avec Github Pages. L'intégralité du texte est en police <a href="https://rsms.me/inter/">Inter</a>.</p>
+				
+				<div class="flex gap-4">
+					<a href="https://github.com/tkerkour">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="text-gray-500 hover:text-black" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+					</a>
+					<a href="https://www.linkedin.com/in/thomaskerkour/">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-gray-500 hover:text-black" aria-hidden="true"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg>
+					</a>
+					<a href="mailto:hello@tkerkour.com">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" class="text-gray-500 hover:text-black" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+					</a>
+				</div>
+
+			</footer>
 		</div>
-
-		<div>
-			<p>JUIN 2021 À JUILLET 2022</p>
-			<p>C-MonEtiquette, Bordeaux- Développeur Full Stack Freelance</p>
-			<ul>
-				<li>Améliorer la qualité et la rapidité des livraisons des nouvelles fonctionnalités grâce à la migration de la codebase de Javascript vers Typescript</li>
-				<li>Création et intégration d’un design system pour améliorer la qualité de l’expérience utilisateur</li>
-			</ul>
-		</div>
-
-		<div>
-			<p>JANVIER 2022 À DÉCEMBRE 2022</p>
-			<p>Passerelle Proshop, Bordeaux- Développeur Full Stack Freelance</p>
-			<ul>
-				<li>Génération de plusieurs milliers d'euros de chiffre d'affaires supplémentaire grâce à la création de sites e-commerce Prestashop pour des boutiques physiques de vêtement partenaires.</li>
-			</ul>
-		</div>
-
-		<div>
-			<p>SEPTEMBRE 2020  À JANVIER 2021</p>
-			<p>Memosya, Paris- Développeur Full Stack Freelance</p>
-			<ul>
-				<li>Création de l’application mobile pour le compte d’un entrepreneur qu’il a vendu à des professeurs de droit de La Sorbonne.</li>
-			</ul>
-		</div>
-
-		<div>
-			<p>SEPTEMBRE 2020  À OCTOBRE 202O</p>
-			<p>Previmeteo, Bordeaux- Développeur Full Stack Freelance</p>
-			<ul>
-				<li>Compléter les membres de l’équipe pour faire face à une charge de travail élevée.</li>
-				<li>Création d’interfaces utilisateurs.</li>
-			</ul>
-		</div>
-
-		<div>
-			<p>JANVIER 2020  À MAI 202O</p>
-			<p>Bookr, Paris- Développeur Full Stack Freelance</p>
-			<ul>
-				<li>Création de la plateforme qui enregistre plus d’un milliers d’utilisateurs et génère plusieurs centaines de collaborations par mois entre influenceurs et marques.</li>
-			</ul>
-		</div>
-
-		<div>
-			<p>JUIN 2019 À JANVIER 2020</p>
-			<p>Picaflor Éditions, Paris- Développeur Full Stack Freelance</p>
-			<ul>
-				<li>Augmentation du trafic de plus de 78%  en déployant plus d’une cinquantaine de pages sur mobiles et tablettes.</li>
-			</ul>
-		</div>
-
-		<div>
-			<p>JUIN 2021 À JUILLET 2022</p>
-			<p>Comptus, Paris- Développeur Full Stack Freelance</p>
-			<ul>
-				<li>Finaliser un projet web bloqué par manque de compétences en front-end.</li>
-				<li>Création et intégration des interfaces utilisateurs.</li>
-			</ul>
-		</div>
-
-		<div>
-			<p>MARS 2019  À DÉCEMBRE 2019</p>
-			<p>Garantipro, Bordeaux- Développeur Full Stack Freelance</p>
-			<ul>
-				<li>Création de la plateforme : système de création de devis / factures, amélioration du onboarding des utilisateurs en récupérant les infos des sociétés par l’API de l’INSEE</li>
-				<li>Création d’une charte graphique</li>
-				<li>Création d’une offre freemium. Gestion des utilisateurs gratuits et abonnés. Intégration de Stripe Connect.</li>
-			</ul>
-		</div>
-
-		<div>
-			<p>AVRIL 2019  À MAI 2019</p>
-			<p>Uppday, Bordeaux- Développeur Full Stack Freelance</p>
-			<ul>
-				<li>Création de la plateforme et d’un système de réservation de salle des fêtes : suivi des réservations, paiement en ligne, notifications d’activités.</li>
-				<li>Mise en place d’un espace administrateur et utilisateurs.</li>
-				<li>Création d’une charte graphique.</li>
-			</ul>
-		</div>
-
-		<div>
-			<p>AVRIL 2019  À JUIN 2019</p>
-			<p>Le Wagon, Bordeaux - Professeur Assistant</p>
-			<ul>
-				<li>Accompagner une vingtaine d’étudiants durant 3 mois : explication des concepts clés du développement web et soutien pour les faire progresser et les rendre autonome</li>
-			</ul>
-		</div>
-
-		<a href="#">Voir le CV complet</a>
-
-		<h3>Projets</h3>
-		<p>A venir...</p>
-
-		<footer>
-			<p>Conçu avec <a href="https://www.figma.com/">Figma</a>, coder avec <a href="https://neovim.io/">neovim</a> par mes soins. Construit sans framework et déployé avec Github Pages. L'intégralité du texte est en police <a href="https://rsms.me/inter/">Inter</a></p>
-			<a href="https://github.com/tkerkour">Github</a>
-			<a href="https://www.linkedin.com/in/thomaskerkour/">Linkedin</a>
-			<a href="mailto:hello@tkerkour.com">Mail</a>
-		</footer>
 	</body>
 </html>
