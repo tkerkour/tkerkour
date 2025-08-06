@@ -61,3 +61,28 @@ h1, h2, h3 {
 .open {
 	overflow-y: hidden;
 }
+nav {
+	transition: transform 300ms ease;
+	transform: translateX(-100%);
+}
+
+.open nav {
+	transform: translateX(0);
+	width: 90%;
+}
+
+.open header {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	backdrop-filter: blur(10px);
+}
+
+.content {
+	transition: padding-left 300ms ease;
+	padding-left: 0;
+}
+
+.open .content {
+	padding-left: 50%;
+}
