@@ -14,24 +14,62 @@
   font-display: swap;
 }
 
+:root {
+	--background: white;
+	--text: black;
+	--text-subdued: gray;
+	--text-hovered: black;
+	--border: #F5F5F5;
+	--sidebar-background: white;
+	--sidebar-current: #EFEFEF;
+}
+
+:root .dark {
+	--background: black;
+	--text: white;
+	--text-subdued: #747474;
+	--text-hovered: white;
+	--border: #1E1E1E;
+	--sidebar-background: #1E1E1E;
+	--sidebar-current: #222222;
+}
+
 html {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 body {
 	font-family: 'Inter';
 	margin: auto;
+	background: var(--background);
+	color: var(--text);
+	transition: background 105ms ease, color 105ms ease;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	border: none;
+	background: unset;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text);
+}
+
+p {
+	margin: 0 0 10px;
 }
 
 .h1 {
 	text-align: center;
-	font-size: 60px;
+	font-size: 3.75rem;
 	font-weight: 500;
-}
-
-.h2, .h3 {
-	font-weight: 500;
-	font-size: 18px;
 }
 
 .h2 {
@@ -39,14 +77,15 @@ body {
 	margin-top: 20px;
 }
 
-.h3 {
-	font-size: 18px;
+.h2, .h3 {
+	font-weight: 500;
+	font-size: 1.125rem;
 }
 
 .border-top {
 	margin-top: 50px;
 	padding-top: 40px;
-	border-top: 1px solid #F5F5F5;
+	border-top: 1px solid var(--border);
 }
 
 h1, h2, h3 {
@@ -58,31 +97,218 @@ h1, h2, h3 {
 	margin-top: 50px;
 }
 
-.open {
-	overflow-y: hidden;
+.i-close {
+	display: none;
+} 
+
+#menu-btn,
+#theme {
+	z-index: 1;
+	position: relative;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
+
 nav {
-	transition: transform 300ms ease;
-	transform: translateX(-100%);
+	position: absolute;
+	top: 0;
+	left: -100%;
+	bottom: 0;
+	transition: left 185ms ease-in;
+	z-index: 0;
+	padding-top: 40px;
+	background: var(--sidebar-background);
+	height: 100vh;
+	overflow: hidden;
 }
 
-.open nav {
-	transform: translateX(0);
-	width: 90%;
+nav ul {
+	margin-top: 60px;
+	margin: 60px 20px 20px;
 }
 
-.open header {
+nav li {
+	padding: 10px 16px;
+	font-size: 0.875rem;
+	border-radius: 4px;
+	white-space: nowrap;
+}
+
+header {
+	position: fixed;
+	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
-	backdrop-filter: blur(10px);
+	padding: 8px 20px;
+	background: var(--background);
+	z-index: 1;
+	display: flex;
+	align-items: start;
+	gap: 4px;
 }
 
 .content {
-	transition: padding-left 300ms ease;
-	padding-left: 0;
+	transition: padding-left 300ms ease-in;
+	padding: 60px 20px;
+	margin: auto;
+	max-width: 768px;
+}
+
+.open {
+	overflow: hidden;
+	user-select: none;
+}
+
+.open .i-close {
+	display: block;
+}
+.open .i-open {
+	display: none;
+}
+
+.open nav {
+	left: 0;
+	border-right: 1px solid var(--border);
+}
+
+.open header {
+	bottom: 0;
+	background: unset;
+	backdrop-filter: blur(10px);
 }
 
 .open .content {
 	padding-left: 50%;
+}
+
+.bold {
+	font-weight: 600;
+}
+
+.link {
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.link > svg {
+	transform: translate3d(0px, 0px, 0px);
+	transition: transform 185ms ease;
+}
+
+.link:hover > svg {
+	transform: translate3d(2px, -4px, 0px);
+}
+
+body:not(.dark) #theme > :first-child,
+body.dark #theme > :last-child {
+	display: none;	
+}
+
+body.dark:not(.open) .shadow {
+	border-bottom: 1px solid var(--border);
+}
+body:not(.dark) .shadow {
+	box-shadow: 0 4px 6px var(--border);
+}
+
+.subdued {
+	color: var(--text-subdued);
+	transition: color 185ms ease;
+}
+
+.subdued:hover {
+	color: var(--text-hovered);
+}
+
+.current {
+	background: var(--sidebar-current);
+}
+
+.xp {
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.xp > .link,
+.xp > p {
+	margin-bottom: 10px;
+}
+
+.xp > p {
+	font-size: 0.875rem;
+	width: 150px;
+	font-weight: 300;
+}
+
+.xp li {
+	margin-bottom: 10px;
+}
+
+footer {
+	margin-top: 60px;
+	font-weight: 300;
+	font-size: 0.875rem;
+}
+
+footer > div {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+footer p {
+	text-align: center;
+}
+
+@media screen and (min-width: 550px) {
+	html {
+		font-size: 16px;
+	}
+
+	.xp {
+		flex-direction: row;
+	}
+
+	.xp > ul {
+		padding-left: 150px;
+	}
+
+	.open {
+		overflow: auto;
+	}
+
+	.open header {
+		backdrop-filter: none;
+		right: inherit;
+	}
+	
+	.open nav {
+		width: 200px;
+	}
+
+	.open .content {
+		padding-left: 220px;
+	}
+	
+	nav {
+		background: unset;
+	}
+}
+
+@media screen and (max-width: 765px) {
+	.open .xp > ul {
+		padding-left: 0;
+	}
+	.open .xp .link {
+		width: 100%;
+	}
 }
