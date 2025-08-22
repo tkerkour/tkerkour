@@ -36,6 +36,7 @@
 
 html {
 	font-size: 14px;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -118,7 +119,7 @@ nav {
 	top: 0;
 	left: -100%;
 	bottom: 0;
-	transition: left 185ms ease-in;
+	transition: left 105ms ease-in;
 	z-index: 0;
 	padding-top: 40px;
 	background: var(--sidebar-background);
@@ -131,11 +132,17 @@ nav ul {
 	margin: 60px 20px 20px;
 }
 
-nav li {
+nav a {
 	padding: 10px 16px;
 	font-size: 0.875rem;
 	border-radius: 4px;
 	white-space: nowrap;
+	display: block;
+	transition: font-weight 105ms ease;
+}
+
+nav a:hover {
+	font-weight: 800;
 }
 
 header {
@@ -149,13 +156,17 @@ header {
 	display: flex;
 	align-items: start;
 	gap: 4px;
+	transition: background 105ms ease;
 }
 
 .content {
-	transition: padding-left 300ms ease-in;
+	position: relative;
+	transition: left 105ms ease-in, padding-left 105ms ease-in;
 	padding: 60px 20px;
 	margin: auto;
 	max-width: 768px;
+	left: 0;
+	padding-left: 0;
 }
 
 .open {
@@ -182,7 +193,7 @@ header {
 }
 
 .open .content {
-	padding-left: 50%;
+	left: 50%;
 }
 
 .bold {
@@ -198,7 +209,7 @@ header {
 
 .link > svg {
 	transform: translate3d(0px, 0px, 0px);
-	transition: transform 185ms ease;
+	transition: transform 105ms ease;
 }
 
 .link:hover > svg {
@@ -219,7 +230,7 @@ body:not(.dark) .shadow {
 
 .subdued {
 	color: var(--text-subdued);
-	transition: color 185ms ease;
+	transition: color 105ms ease;
 }
 
 .subdued:hover {
@@ -228,6 +239,7 @@ body:not(.dark) .shadow {
 
 .current {
 	background: var(--sidebar-current);
+	font-weight: 800;
 }
 
 .xp {
@@ -269,6 +281,10 @@ footer p {
 	text-align: center;
 }
 
+#about, #xp {
+	scroll-margin-top: 80px;
+}
+
 @media screen and (min-width: 550px) {
 	html {
 		font-size: 16px;
@@ -296,6 +312,7 @@ footer p {
 	}
 
 	.open .content {
+		left: 0;
 		padding-left: 220px;
 	}
 	
