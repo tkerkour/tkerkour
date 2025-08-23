@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (!menuIsExpanded) {
 			toggleMenu();
 		}
-		addCurrentTo(i);
 	}));
 
 	window.addEventListener('scroll', onScroll);
