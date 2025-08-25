@@ -58,8 +58,11 @@ button {
 	background: unset;
 }
 
-a {
+a:not(.xp a) {
 	text-decoration: none;
+}
+
+a {
 	color: var(--text);
 }
 
@@ -286,11 +289,12 @@ footer p {
 	}
 
 	.xp {
-		flex-direction: row;
+		display: grid;
+		grid-template-columns: 150px 1fr;
 	}
 
-	.xp > ul {
-		padding-left: 150px;
+	.xp :not(:first-child) {
+		grid-column: 2;
 	}
 
 	.open {
@@ -324,3 +328,23 @@ footer p {
 		width: 100%;
 	}
 }
+
+.chips {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	margin-top: 10px;
+}
+
+.chips > p {
+	background: var(--current);
+	border-radius: 12px;
+	display: block;
+	font-weight: 300;
+	text-align: center;
+	padding: 4px 20px;
+	font-size: 0.875rem;
+	margin: 0;
+}
+
