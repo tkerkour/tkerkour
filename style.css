@@ -98,10 +98,6 @@ h1, h2, h3 {
 	margin-top: 50px;
 }
 
-.i-close {
-	display: none;
-} 
-
 #menu-btn,
 #theme {
 	z-index: 1;
@@ -173,10 +169,10 @@ header {
 	user-select: none;
 }
 
-.open .i-close {
+:not(.open) .i-open {
 	display: block;
 }
-.open .i-open {
+.open .i-open, body:not(.open) .i-close {
 	display: none;
 }
 

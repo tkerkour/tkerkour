@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
 		body.classList.toggle('dark');
 	}
 
+	const isOnLargeScreen = window.matchMedia("(min-width: 1024px)").matches;
+	if (isOnLargeScreen) {
+ 		body.classList.toggle('open');
+	}
+
+	const isOnMidScreen = window.matchMedia("(min-width: 550px)").matches;
 	const menuBtn = document.getElementById("menu-btn");
 	const themeBtn = document.getElementById("theme");
 	const title = document.querySelector("h1");
@@ -28,17 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
 			header.classList.remove('shadow');
 		}
 		if(scrollY > (xpTop - 150)) {
-			navLinks[0].classList.remove('current');
-			navLinks[1].classList.add('current');
+			addCurrentTo(1);
 		} else {
-			navLinks[0].classList.add('current');
-			navLinks[1].classList.remove('current');
+			addCurrentTo(0);
 		}
 	};
 
 	navLinks.forEach((link, i) => link.addEventListener('click', (e) => {
-		const menuIsExpanded = window.matchMedia("(min-width: 550px)").matches;
-		if (!menuIsExpanded) {
+		if (!isOnMidScreen) {
 			toggleMenu();
 		}
 	}));
