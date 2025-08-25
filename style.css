@@ -16,22 +16,22 @@
 
 :root {
 	--background: white;
-	--text: black;
+	--text: #131313;
 	--text-subdued: gray;
 	--text-hovered: black;
 	--border: #F5F5F5;
 	--sidebar-background: white;
-	--sidebar-current: #EFEFEF;
+	--current: #EFEFEF;
 }
 
 :root .dark {
-	--background: black;
-	--text: white;
+	--background: #131313;
+	--text: #efefef;
 	--text-subdued: #747474;
 	--text-hovered: white;
 	--border: #1E1E1E;
 	--sidebar-background: #1E1E1E;
-	--sidebar-current: #222222;
+	--current: #222222;
 }
 
 html {
@@ -236,7 +236,7 @@ body:not(.dark) .shadow {
 }
 
 .current {
-	background: var(--sidebar-current);
+	background: var(--current);
 	font-weight: 800;
 }
 
