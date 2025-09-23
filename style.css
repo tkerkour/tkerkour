@@ -222,7 +222,7 @@ body.dark #theme > :last-child {
 body.dark:not(.open) .shadow {
 	border-bottom: 1px solid var(--border);
 }
-body:not(.dark) .shadow {
+body:not(.dark):not(.open) .shadow {
 	box-shadow: 0 4px 6px var(--border);
 }
 
