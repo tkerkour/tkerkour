@@ -211,12 +211,12 @@ header {
 	gap: 4px;
 }
 
-.link > svg {
+.link > svg, .resume-btn > svg {
 	transform: translate3d(0px, 0px, 0px);
 	transition: transform 105ms ease;
 }
 
-.link:hover > svg {
+.link:hover > svg, .resume-btn:hover > svg {
 	transform: translate3d(2px, -4px, 0px);
 }
 
@@ -358,10 +358,11 @@ footer p {
 	align-items: center;
 	top: calc(60% - 12px);
 	left: calc(50% - 70px);
+	text-decoration: none;
 }
 
 .resume-btn .bold {
-	margin-right: 8px;
+	margin-right: 4px;
 }
 
 .resume-btn:hover {
